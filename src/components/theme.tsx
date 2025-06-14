@@ -30,6 +30,21 @@ const theme = extendTheme({
       50: '#F7FAFC',
     },
   },
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: 'semibold',
+        borderRadius: 'md',
+      },
+      variants: {
+        ghost: {
+          _hover: {
+            bg: 'whiteAlpha.200',
+          },
+        },
+      },
+    },
+  },
 })
 
 export default theme

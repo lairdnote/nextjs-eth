@@ -13,13 +13,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Your Company</title>
+      </head>
       <body suppressHydrationWarning>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Provider>
           <Box minH="100vh" display="flex" flexDirection="column">
             <Header />
-            <Box flex="1">
+            <Box flex="1" as="main">
               {children}
             </Box>
             <Footer />
